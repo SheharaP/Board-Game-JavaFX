@@ -11,6 +11,7 @@ public class Dice {
         this.diceValue = random.nextInt(6 - 1 + 1) + 1;
         return this.diceValue;
     }
-
-
+    public void resetDice() {
+        this.diceValue = 0;
+    }
 }

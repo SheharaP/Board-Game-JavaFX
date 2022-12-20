@@ -4,51 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbaef1c7-be31-461c-a5e5-80aabd7d3b60" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/BoardEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Dice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Ladder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/PlayerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/SceneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Snake.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Tile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/avatar-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/avatar-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/blue_won.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/board_template.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/gameScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/game_background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/game_screen_backdrop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/green_won.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/hello-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/new-board-gui.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/startScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/start_button.png" afterDir="false" />
+    <list default="true" id="cbaef1c7-be31-461c-a5e5-80aabd7d3b60" name="Changes" comment="Commit - Board &amp; Tiles setup">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Dice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/PlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/gameScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/gameScreen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +78,19 @@
       <option name="presentableId" value="Default" />
       <updated>1671083529358</updated>
     </task>
+    <task id="LOCAL-00001" summary="Commit - Board &amp; Tiles setup">
+      <created>1671509409210</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671509409211</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit - Board &amp; Tiles setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit - Board &amp; Tiles setup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

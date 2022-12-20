@@ -42,7 +42,7 @@ public class SceneController {
         stage.setScene(scene);
         stage.show();
 
-        Main.startNewGame(false);
-        //Main.pc = (PlayerController) loader.getController();
+        Main.startNewGame();
+        Main.pc = (PlayerController) loader.getController();
     }
 }
