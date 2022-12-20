@@ -1,2 +1,6 @@
-package com.mspan.guigame;public class Game {
+package com.mspan.guigame;
+
+public class Game {
+
+
 }

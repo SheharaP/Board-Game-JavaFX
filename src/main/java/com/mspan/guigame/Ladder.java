@@ -1,4 +1,4 @@
-package com.mspan.game;
+package com.mspan.guigame;
 
 public class Ladder extends BoardEntity{
 

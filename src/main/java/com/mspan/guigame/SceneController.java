@@ -1,4 +1,4 @@
-package com.mspan.game;
+package com.mspan.guigame;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -15,34 +15,22 @@ import java.io.IOException;
 public class SceneController {
 
     @FXML
-    private ImageView credits;
-
-    @FXML
-    private ImageView exit;
-
-    @FXML
-    private ImageView multi;
-
-    @FXML
-    private ImageView rules;
-
-    @FXML
-    private ImageView single;
+    private ImageView start;
 
     @FXML
     void mouseOffStart(MouseEvent event) {
-        multi.setLayoutY(428);
-        multi.setLayoutX(180);
-        multi.setFitHeight(48);
-        multi.setFitWidth(200);
+        start.setLayoutY(428);
+        start.setLayoutX(180);
+        start.setFitHeight(48);
+        start.setFitWidth(200);
     }
 
     @FXML
     void mouseOnStart(MouseEvent event) {
-        multi.setLayoutY(424);
-        multi.setLayoutX(180);
-        multi.setFitHeight(52.8);
-        multi.setFitWidth(220);
+        start.setLayoutY(424);
+        start.setLayoutX(180);
+        start.setFitHeight(52.8);
+        start.setFitWidth(220);
     }
 
     @FXML
@@ -55,6 +43,6 @@ public class SceneController {
         stage.show();
 
         Main.startNewGame(false);
-        Main.pc = (PlayerController) loader.getController();
+        //Main.pc = (PlayerController) loader.getController();
     }
 }

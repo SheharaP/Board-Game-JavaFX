@@ -1,2 +1,4 @@
-package com.mspan.guigame;public class Tile {
+package com.mspan.guigame;
+
+public class Tile {
 }

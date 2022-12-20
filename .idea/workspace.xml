@@ -5,17 +5,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbaef1c7-be31-461c-a5e5-80aabd7d3b60" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/mspan/boardgamejavafx/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/boardgamejavafx/hello-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/BoardEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Dice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Ladder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/PlayerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/SceneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Snake.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Tile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/avatar-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/avatar-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/blue_won.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/board_template.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/gameScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/game_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/game_screen_backdrop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/green_won.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/hello-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/new-board-gui.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/startScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/mspan/guigame/start_button.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -33,9 +84,29 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/mspan/IdeaProjects/Snake-and-Ladders-Game-JavaFX"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mspan\IdeaProjects\Board-Game-JavaFX\src\main\java\com\mspan\guigame" />
+      <recent name="C:\Users\mspan\IdeaProjects\Board-Game-JavaFX\src\main\resources\com\mspan\guigame" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mspan\IdeaProjects\Board-Game-JavaFX\src\main\resources\com\mspan\guigame" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Run Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.mspan.guigame.Main" />
+      <module name="Board-Game-JavaFX" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -46,5 +117,15 @@
       <updated>1671083529358</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
