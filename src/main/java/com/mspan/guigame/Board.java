@@ -80,7 +80,6 @@ public class Board {
         for (int i = 1; i <= 10; i++) {
             ArrayList<Integer> x = new ArrayList<>();
             x.add(43 + ((i - 1) * 50));
-            x.add(43 + ((i - 1) * 50));
             x.add(72);
             board.put(101 - i, x);
         }
