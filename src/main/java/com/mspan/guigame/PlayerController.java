@@ -7,8 +7,6 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
-import java.util.Random;
-
 public class PlayerController {
 
     @FXML
