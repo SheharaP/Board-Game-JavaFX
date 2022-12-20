@@ -34,6 +34,7 @@ public class PlayerController {
 
     public void movePlayer(Player p) {
 
+        //
 //        if (p.getColor().equals("blue")) {
 //            piece = blue;
 //        } else {
