@@ -34,22 +34,16 @@ public class PlayerController {
 
     public void movePlayer(Player p) {
 
-        //
-//        if (p.getColor().equals("blue")) {
-//            piece = blue;
-//        } else {
-//            piece = green;
-//        }
-        //if (!p.joinGame() && diceValue != 0) return;
+        if (p.getColor().equals("blue")) {
+            piece = blue;
+        } else {
+            piece = green;
+        }
 
-        //if (p.getPlayerPosition() + diceValue < 100){
-
-        //FIX player moves
         int currentPosition = p.getPlayerPosition();
-        p.setPlayerPosition(currentPosition + this.diceValue);
+        p.setPlayerPosition(diceValue);
 
-
-        System.out.println(p.getPlayerPosition());
+        System.out.println("this is player position " + p.getPlayerPosition());
 
         SequentialTransition st = new SequentialTransition();
 
@@ -70,22 +64,23 @@ public class PlayerController {
         }
 
         st.play();
-
-        //}
     }
 
     @FXML
-    public void diceThrow(MouseEvent mouseEvent) {
-
-        this.diceValue = dice.rollDice();
-        throwDice.setText(Integer.toString(this.diceValue));
+    public void diceThrow() {
+        diceValue = dice.rollDice();
+        throwDice.setText(Integer.toString(diceValue));
+        System.out.println(diceValue);
     }
 
     public int getDiceValue() {
-        return this.diceValue;
+        return diceValue;
     }
 
     public void resetDice() {
-        diceValue = 0;
+        this.diceValue = 0;
     }
+
+
+
 }

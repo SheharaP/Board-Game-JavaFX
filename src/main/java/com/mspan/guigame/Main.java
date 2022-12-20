@@ -19,21 +19,56 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("startScreen.fxml")); //root node of scene
-        Scene scene = new Scene(root, 560, 750);
-        stage.setTitle("Snakes and Ladder Board Game");
-        stage.setScene(scene);
-        stage.show();
 
-        Board game = new Board();
-        p1 = new Player(pc, "blue");
-        p2 = new Player(pc, "green");
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("startScreen.fxml")); //root node of scene
+            Scene scene = new Scene(root, 560, 750);
+            stage.setTitle("Snakes and Ladder Board Game");
+            stage.setScene(scene);
+            stage.show();
+
+            Board game = new Board();
+            p1 = new Player(pc, "blue");
+            p2 = new Player(pc, "green");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     public static void startNewGame() {
 
-        pc.resetDice();
-        pc.movePlayer(p1);
+        Thread thread = new Thread() {
+            @Override
+            public void run() {
+                pc.resetDice();
+
+                while(p1.getPlayerPosition() != 100 && p2.getPlayerPosition() != 100) {
+                    int count = 1;
+                    try{
+                        while (pc.getDiceValue() == 0) {
+                            sleep(500);
+                        }
+
+                        System.out.println("Player 1 position");
+                        pc.movePlayer(p1);
+                        pc.resetDice();
+                        System.out.println(p1.getPlayerPosition());
+                        sleep(1500);
+
+                    }
+                    catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                }
+
+            }
+
+
+        };
+        thread.start();
 
     }
 

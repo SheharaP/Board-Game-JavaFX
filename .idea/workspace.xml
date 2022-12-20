@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbaef1c7-be31-461c-a5e5-80aabd7d3b60" name="Changes" comment="Commit - Git config">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Dice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mspan/guigame/PlayerController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +104,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671520327127</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Commit - Git config">
+      <created>1671520437582</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671520437582</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Commit - Git config">
+      <created>1671520486505</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671520486505</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
