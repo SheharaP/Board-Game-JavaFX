@@ -57,6 +57,16 @@ public class Main extends Application {
                         System.out.println(p1.getPlayerPosition());
                         sleep(1500);
 
+                        while (pc.getDiceValue() == 0) {
+                            sleep(500);
+                        }
+
+                        System.out.println("Player 2 position");
+                        pc.movePlayer(p2);
+                        pc.resetDice();
+                        System.out.println(p2.getPlayerPosition());
+                        sleep(1500);
+
                     }
                     catch (Exception e) {
                         e.printStackTrace();
