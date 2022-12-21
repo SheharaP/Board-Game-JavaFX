@@ -58,7 +58,16 @@ public class Main extends Application {
                         System.out.println(p1.getPlayerPosition());
                         sleep(1500);
 
+                        if(p1.getPlayerPosition() == 100 || p2.getPlayerPosition() == 100) {
+                            Player winner = p1.getPlayerPosition() == 100 ? p1 : p2;
+                            try {
+                                pc.getWinScreen(winner);
+                            } catch (InterruptedException | IOException e) {
+                                e.printStackTrace();
+                            }
 
+                            break;
+                        }
                         while (pc.getDiceValue() == 0) {
                             sleep(500);
                         }
@@ -68,6 +77,18 @@ public class Main extends Application {
                         pc.resetDice();
                         System.out.println(p2.getPlayerPosition());
                         sleep(1500);
+
+
+                        if(p1.getPlayerPosition() == 100 || p2.getPlayerPosition() == 100) {
+                            Player winner = p1.getPlayerPosition() == 100 ? p1 : p2;
+                            try {
+                                pc.getWinScreen(winner);
+                            } catch (InterruptedException | IOException e) {
+                                e.printStackTrace();
+                            }
+
+                            break;
+                        }
 
                     } catch (Exception e) {
                         e.printStackTrace();
