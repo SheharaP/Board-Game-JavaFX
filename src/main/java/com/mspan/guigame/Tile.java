@@ -31,7 +31,6 @@ public class Tile {
         return nextTileX;
     }
 
-
     public int getNextTileY() {
         return nextTileY;
     }
