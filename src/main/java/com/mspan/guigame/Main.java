@@ -40,7 +40,7 @@ public class Main extends Application {
         Thread thread = new Thread() {
             @Override
             public void run() {
-                pc.resetDice();
+                pc.resetDiceValue();
                 p1.playerReset();
                 p2.playerReset();
 
@@ -51,7 +51,7 @@ public class Main extends Application {
                         }
                         System.out.println("Player 1 position");
                         pc.movePlayer(p1);
-                        pc.resetDice();
+                        pc.resetDiceValue();
                         System.out.println(p1.getPlayerPosition());
                         sleep(1500);
 
@@ -71,7 +71,7 @@ public class Main extends Application {
 
                         System.out.println("Player 2 position");
                         pc.movePlayer(p2);
-                        pc.resetDice();
+                        pc.resetDiceValue();
                         System.out.println(p2.getPlayerPosition());
                         sleep(1500);
 

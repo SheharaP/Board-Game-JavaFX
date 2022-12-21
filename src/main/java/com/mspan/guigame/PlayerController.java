@@ -125,8 +125,8 @@ public class PlayerController {
         return diceValue;
     }
 
-    public void resetDice() {
-        this.diceValue = 0;
+    public void resetDiceValue() {
+        dice.resetDice();
     }
 
     @FXML

@@ -12,6 +12,6 @@ public class Dice {
         return this.diceValue;
     }
     public void resetDice() {
-        this.diceValue = -1;
+        this.diceValue = 0;
     }
 }
