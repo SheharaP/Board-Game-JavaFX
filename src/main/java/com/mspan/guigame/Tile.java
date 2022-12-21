@@ -20,10 +20,6 @@ public class Tile {
         return tileStart;
     }
 
-    public void setTileStart(int tileStart) {
-        this.tileStart = tileStart;
-    }
-
     public int getTileEnd() {
         return tileEnd;
     }
@@ -35,15 +31,8 @@ public class Tile {
         return nextTileX;
     }
 
-    public void setNextTileX(int nextTileX) {
-        this.nextTileX = nextTileX;
-    }
 
     public int getNextTileY() {
         return nextTileY;
-    }
-
-    public void setNextTileY(int nextTileY) {
-        this.nextTileY = nextTileY;
     }
 }
