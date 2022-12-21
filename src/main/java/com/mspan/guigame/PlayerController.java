@@ -43,7 +43,7 @@ public class PlayerController {
         int currentPosition = p.getPlayerPosition();
         p.setPlayerPosition(diceValue);
 
-        System.out.println("this is player position " + p.getPlayerPosition());
+        System.out.println("player position = " + p.getPlayerPosition());
 
         SequentialTransition st = new SequentialTransition();
 
@@ -70,7 +70,7 @@ public class PlayerController {
     public void diceThrow() {
         diceValue = dice.rollDice();
         throwDice.setText(Integer.toString(diceValue));
-        System.out.println(diceValue);
+        System.out.println("Dice value = " + diceValue);
     }
 
     public int getDiceValue() {
