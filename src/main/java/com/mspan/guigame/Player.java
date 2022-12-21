@@ -30,9 +30,11 @@ public class Player {
     public void setChangedPosition(int val) {
         this.position = val;
     }
+
     public String getColor() {
         return this.color;
     }
+
     public boolean joinGame() {
         return this.joinedGame;
     }

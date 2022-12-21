@@ -36,6 +36,10 @@ public class PlayerController {
             piece = green;
         }
 
+        if (!p.joinGame() && diceValue != 1) return;
+
+        p.setJoinedGame();
+
         int currentPosition = p.getPlayerPosition();
         p.setPlayerPosition(diceValue);
 

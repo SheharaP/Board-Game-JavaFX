@@ -30,8 +30,7 @@ public class Main extends Application {
             Board game = new Board();
             p1 = new Player(pc, "blue");
             p2 = new Player(pc, "green");
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -43,14 +42,17 @@ public class Main extends Application {
             @Override
             public void run() {
                 pc.resetDice();
+                p1.playerReset();
+                p2.playerReset();
 
-                while(p1.getPlayerPosition() != 100 && p2.getPlayerPosition() != 100) {
-                    int count = 1;
-                    try{
+                int count = 0;
+                Player p;
+
+                while (p1.getPlayerPosition() != 100 && p2.getPlayerPosition() != 100) {
+                    try {
                         while (pc.getDiceValue() == 0) {
                             sleep(500);
                         }
-
                         System.out.println("Player 1 position");
                         pc.movePlayer(p1);
                         pc.resetDice();
@@ -67,8 +69,7 @@ public class Main extends Application {
                         System.out.println(p2.getPlayerPosition());
                         sleep(1500);
 
-                    }
-                    catch (Exception e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
 
