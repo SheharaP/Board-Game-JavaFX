@@ -44,9 +44,6 @@ public class Main extends Application {
                 p1.playerReset();
                 p2.playerReset();
 
-                int count = 0;
-                Player p;
-
                 while (p1.getPlayerPosition() != 100 && p2.getPlayerPosition() != 100) {
                     try {
                         while (pc.getDiceValue() == 0) {
