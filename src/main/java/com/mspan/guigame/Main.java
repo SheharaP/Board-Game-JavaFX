@@ -58,6 +58,7 @@ public class Main extends Application {
                         System.out.println(p1.getPlayerPosition());
                         sleep(1500);
 
+
                         while (pc.getDiceValue() == 0) {
                             sleep(500);
                         }
