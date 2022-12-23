@@ -8,8 +8,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import static java.lang.Thread.sleep;
-
 public class Main extends Application {
 
     static Player p1;

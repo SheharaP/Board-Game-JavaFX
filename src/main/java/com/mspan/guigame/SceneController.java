@@ -1,6 +1,5 @@
 package com.mspan.guigame;
 
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
