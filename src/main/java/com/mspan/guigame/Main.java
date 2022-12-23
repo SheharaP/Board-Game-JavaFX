@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static java.lang.Thread.sleep;
+
 public class Main extends Application {
 
     static Player p1;
@@ -44,54 +46,50 @@ public class Main extends Application {
 
                 while (p1.getPlayerPosition() != 100 && p2.getPlayerPosition() != 100) {
                     try {
-                        while (pc.getDiceValue() == 0) {
-                            sleep(500);
-                        }
-                        System.out.println("Player 1 position");
-                        pc.movePlayer(p1);
-                        pc.resetDiceValue();
-                        System.out.println(p1.getPlayerPosition());
-                        sleep(1500);
+                            if (p1.getPlayerPosition() == 100 || p2.getPlayerPosition() == 100) {
+                                Player winner = p1.getPlayerPosition() == 100 ? p1 : p2;
+                                try {
+                                    pc.getWinScreen(winner);
+                                } catch (InterruptedException | IOException e) {
+                                    e.printStackTrace();
+                                }
 
-                        if(p1.getPlayerPosition() == 100 || p2.getPlayerPosition() == 100) {
-                            Player winner = p1.getPlayerPosition() == 100 ? p1 : p2;
-                            try {
-                                pc.getWinScreen(winner);
-                            } catch (InterruptedException | IOException e) {
-                                e.printStackTrace();
+                                break;
                             }
-
-                            break;
-                        }
-                        while (pc.getDiceValue() == 0) {
-                            sleep(500);
-                        }
-
-                        System.out.println("Player 2 position");
-                        pc.movePlayer(p2);
-                        pc.resetDiceValue();
-                        System.out.println(p2.getPlayerPosition());
-                        sleep(1500);
-
-                        if(p1.getPlayerPosition() == 100 || p2.getPlayerPosition() == 100) {
-                            Player winner = p1.getPlayerPosition() == 100 ? p1 : p2;
-                            try {
-                                pc.getWinScreen(winner);
-                            } catch (InterruptedException | IOException e) {
-                                e.printStackTrace();
+                            while (pc.getDiceValue() == 0) {
+                                sleep(500);
                             }
+                            System.out.println("Player 1 position");
+                            pc.movePlayer(p1);
+                            pc.resetDiceValue();
+                            sleep(1500);
 
-                            break;
-                        }
+                            if (p1.getPlayerPosition() == 100 || p2.getPlayerPosition() == 100) {
+                                Player winner = p1.getPlayerPosition() == 100 ? p1 : p2;
+                                try {
+                                    pc.getWinScreen(winner);
+                                } catch (InterruptedException | IOException e) {
+                                    e.printStackTrace();
+                                }
 
-                    } catch (Exception e) {
+                                break;
+                            }
+                            while (pc.getDiceValue() == 0) {
+                                sleep(500);
+                            }
+                            System.out.println("Player 2 position");
+                            pc.movePlayer(p2);
+                            pc.resetDiceValue();
+                            System.out.println(p2.getPlayerPosition());
+                            sleep(1500);
+
+                    } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-
                 }
-
             }
         };
+
         thread.start();
 
     }

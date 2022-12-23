@@ -2,6 +2,8 @@ package com.mspan.guigame;
 
 import javafx.animation.SequentialTransition;
 import javafx.animation.TranslateTransition;
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
@@ -34,7 +36,7 @@ public class PlayerController {
     private int diceValue;
     Dice dice = new Dice();
 
-    public void movePlayer(Player p) {
+    public void movePlayer(Player p) throws InterruptedException {
 
         if (p.getColor().equals("blue")) {
             piece = blue;
@@ -45,16 +47,13 @@ public class PlayerController {
         if (!p.joinGame() && diceValue != 1) return;
 
         if (p.getPlayerPosition() + diceValue > 100) return;
-
         p.setJoinedGame();
-
         int currentPosition = p.getPlayerPosition();
         p.setPlayerPosition(diceValue);
 
         System.out.println("player position = " + p.getPlayerPosition());
 
         SequentialTransition st = new SequentialTransition();
-
         for (int i = currentPosition + 1; i <= p.getPlayerPosition(); i++) {
             TranslateTransition translate = new TranslateTransition(Duration.seconds(0.25), piece);
 
@@ -68,7 +67,6 @@ public class PlayerController {
             translate.setByX(x0 - xc);
             translate.setByY(y0 - yc);
             st.getChildren().add(translate);
-
         }
 
         if (Board.ladders.containsKey(p.getPlayerPosition())) {
@@ -115,24 +113,23 @@ public class PlayerController {
     }
 
     @FXML
-    public void diceThrow() {
+    public void diceThrow(ActionEvent event) {
         diceValue = dice.rollDice();
         throwDice.setText(Integer.toString(diceValue));
         System.out.println("Dice value = " + diceValue);
     }
-
     public int getDiceValue() {
         return diceValue;
     }
 
     public void resetDiceValue() {
-        dice.resetDice();
+        this.diceValue = 0;
     }
 
     @FXML
     public void getWinScreen(Player winner) throws InterruptedException, IOException {
         sleep(500);
-        if(winner.getColor().equals("blue")) {
+        if (winner.getColor().equals("blue")) {
             blueWin.setLayoutX(80);
             blueWin.setLayoutY(142);
         } else {
