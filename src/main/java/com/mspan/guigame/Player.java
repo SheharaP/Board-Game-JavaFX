@@ -1,5 +1,6 @@
 package com.mspan.guigame;
 
+//TODO: Format the source code. Keep things neat and tidy
 public class Player {
 
     private final String color;

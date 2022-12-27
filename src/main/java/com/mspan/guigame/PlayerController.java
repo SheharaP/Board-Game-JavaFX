@@ -74,6 +74,7 @@ public class PlayerController {
             int newPlayerPosition = gameLadder.end;
             System.out.println("Ladder ends at " + newPlayerPosition);
 
+            //TODO: Following lines appear to be duplicated. Read about DRY?
             TranslateTransition translate = new TranslateTransition(Duration.seconds(0.25), piece);
 
             int xc = Board.board.get(p.getPlayerPosition()).get(0);

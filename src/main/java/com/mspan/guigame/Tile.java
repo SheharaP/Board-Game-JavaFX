@@ -16,6 +16,7 @@ public class Tile {
         this.nextTileY = nextTileY;
     }
 
+    //TODO: Read about lombok
     public int getTileStart() {
         return tileStart;
     }

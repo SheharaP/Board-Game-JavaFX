@@ -5,20 +5,26 @@ import java.util.HashMap;
 
 public class Board {
 
+    //TODO: Access modifiers: Make things private and accessible via accessors as necessary
+    //TODO: Types: Use types which are at higher ups in inheritance hierarchy.
+    //TODO: Static: Don't misuse static keyword
     public static HashMap<Integer, ArrayList<Integer>> board = new HashMap<>();
 
     public static HashMap<Integer, Ladder> ladders = new HashMap<>();
     public static HashMap<Integer, Snake> snakes = new HashMap<>();
 
+    //TODO: Why not modifying the access of this?
     Tile tile = new Tile(43, 572, 50,50);
 
     public Board() {
+        //TODO: Mark the variables which won't be reassigned, final
         ArrayList<Integer> arr = new ArrayList<>();
         arr.add(tile.getTileStart());
         arr.add(tile.getTileEnd());
         System.out.println(arr);
         board.put(0, arr);
 
+        //TODO: All 10 of the following loops can be nested in another for loop?
         for (int i = 1; i <= 10; i++) {
             ArrayList<Integer> x = new ArrayList<>();
             x.add(tile.getTileStart() + ((i - 1) * tile.getNextTileX()));
@@ -119,6 +125,7 @@ public class Board {
             board.put(101 - i, x);
         }
 
+        //TODO: Enhancement: Think of a way to make this customisable (may be a game with multiple levels?)
         ladders.put(4, new Ladder(4, 25));
         ladders.put(21, new Ladder(21, 39));
         ladders.put(29, new Ladder(29, 74));

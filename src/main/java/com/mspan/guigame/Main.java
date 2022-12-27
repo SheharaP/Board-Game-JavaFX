@@ -21,12 +21,14 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
 
         try {
+          //TODO: Possible null outcome. Might need to handle that...
             Parent root = FXMLLoader.load(getClass().getResource("startScreen.fxml")); //root node of scene
             Scene scene = new Scene(root, 560, 750);
             stage.setTitle("Snakes and Ladder Board Game");
             stage.setScene(scene);
             stage.show();
 
+            //TODO: Useless initalisation?
             Board game = new Board();
             p1 = new Player(pc, "blue");
             p2 = new Player(pc, "green");
@@ -37,7 +39,7 @@ public class Main extends Application {
 
     public static void startNewGame() {
 
-        Thread thread = new Thread() {
+        Thread thread = new Thread() { //TODO: Lambda Expressions
             @Override
             public void run() {
                 pc.resetDiceValue();
@@ -57,15 +59,17 @@ public class Main extends Application {
                                 break;
                             }
                             while (pc.getDiceValue() == 0) {
-                                sleep(500);
+                                sleep(500); //TODO: This call is possibly problematic. Read about BUSY-WAITING...
                             }
                             System.out.println("Player 1 position");
                             pc.movePlayer(p1);
                             pc.resetDiceValue();
                             sleep(1500);
 
+                            //TODO: Is there a reason why the same code as above is being repeated?
                             if (p1.getPlayerPosition() == 100 || p2.getPlayerPosition() == 100) {
                                 Player winner = p1.getPlayerPosition() == 100 ? p1 : p2;
+                                //TODO: Nested try/catch. Read about it https://stackoverflow.com/q/4799758
                                 try {
                                     pc.getWinScreen(winner);
                                 } catch (InterruptedException | IOException e) {
