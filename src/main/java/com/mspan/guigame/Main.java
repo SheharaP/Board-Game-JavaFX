@@ -20,7 +20,21 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
+        try {
+          //TODO: Possible null outcome. Might need to handle that...
+            Parent root = FXMLLoader.load(getClass().getResource("startScreen.fxml")); //root node of scene
+            Scene scene = new Scene(root, 560, 750);
+            stage.setTitle("Snakes and Ladder Board Game");
+            stage.setScene(scene);
+            stage.show();
 
+            //TODO: Useless initalisation?
+            Board game = new Board();
+            p1 = new Player(pc, "blue");
+            p2 = new Player(pc, "green");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static void startNewGame() {
