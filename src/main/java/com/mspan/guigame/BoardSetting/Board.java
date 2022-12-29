@@ -30,8 +30,8 @@ public class Board {
 
     //TODO: Why not modifying the access of this?
     Tile tile = new Tile(43, 572, 50, 50);
-    private int rows = 10;
-    private int cols = 10;
+    private final int rows = 10;
+    private final int cols = 10;
 
     public Board() {
         //TODO: Mark the variables which won't be reassigned, final
