@@ -1,4 +1,4 @@
-package com.mspan.guigame;
+package com.mspan.guigame.BoardSetting;
 
 public class Tile {
 

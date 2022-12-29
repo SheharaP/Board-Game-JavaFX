@@ -1,4 +1,4 @@
-package com.mspan.guigame;
+package com.mspan.guigame.BoardSetting;
 
 import java.util.Random;
 

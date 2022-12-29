@@ -1,4 +1,6 @@
-package com.mspan.guigame;
+package com.mspan.guigame.BoardEntities;
+
+import com.mspan.guigame.Controllers.PlayerController;
 
 //TODO: Format the source code. Keep things neat and tidy
 public class Player {
@@ -6,16 +8,16 @@ public class Player {
     private final String color;
     private boolean joinedGame;
     private int position;
-    private PlayerController pc;
+    private final PlayerController pc;
 
-    Player(PlayerController pc, String playerColor) {
+    public Player(PlayerController pc, String playerColor) {
         this.position = 0;
         this.pc = pc;
         this.color = playerColor;
         this.joinedGame = false;
     }
 
-    void playerReset() {
+    public void playerReset() {
         this.position = 0;
         this.joinedGame = false;
     }
@@ -41,8 +43,5 @@ public class Player {
     public void setJoinedGame() {
         this.joinedGame = true;
     }
-
-
-
 
 }

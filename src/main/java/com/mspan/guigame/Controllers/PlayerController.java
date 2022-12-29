@@ -1,8 +1,12 @@
-package com.mspan.guigame;
+package com.mspan.guigame.Controllers;
 
+import com.mspan.guigame.BoardSetting.Board;
+import com.mspan.guigame.BoardEntities.Ladder;
+import com.mspan.guigame.BoardEntities.Snake;
+import com.mspan.guigame.BoardSetting.Dice;
+import com.mspan.guigame.BoardEntities.Player;
 import javafx.animation.SequentialTransition;
 import javafx.animation.TranslateTransition;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -35,6 +39,23 @@ public class PlayerController {
     private ImageView piece;
     private int diceValue;
     Dice dice = new Dice();
+    Board gameBoard = new Board();
+    public void animatePlayer(Player p, int newPlayerPosition, SequentialTransition st){
+
+        TranslateTransition translate = new TranslateTransition(Duration.seconds(0.25), piece);
+
+        int xc = gameBoard.getBoard().get(p.getPlayerPosition()).get(0);
+        int yc = gameBoard.getBoard().get(p.getPlayerPosition()).get(1);
+        p.setChangedPosition(newPlayerPosition);
+        int x0 = gameBoard.getBoard().get(newPlayerPosition).get(0);
+        int y0 = gameBoard.getBoard().get(newPlayerPosition).get(1);
+
+
+        translate.setByY(y0 - yc);
+        translate.setByX(x0 - xc);
+
+        st.getChildren().add(translate);
+    }
 
     public void movePlayer(Player p) throws InterruptedException {
 
@@ -54,60 +75,36 @@ public class PlayerController {
         System.out.println("player position = " + p.getPlayerPosition());
 
         SequentialTransition st = new SequentialTransition();
+
         for (int i = currentPosition + 1; i <= p.getPlayerPosition(); i++) {
             TranslateTransition translate = new TranslateTransition(Duration.seconds(0.25), piece);
 
-            int xc = Board.board.get(i - 1).get(0);
-            int yc = Board.board.get(i - 1).get(1);
+            int xc = gameBoard.getBoard().get(i - 1).get(0);
+            int yc = gameBoard.getBoard().get(i - 1).get(1);
 
-            int x0 = Board.board.get(i).get(0);
-            int y0 = Board.board.get(i).get(1);
-
+            int x0 = gameBoard.getBoard().get(i).get(0);
+            int y0 = gameBoard.getBoard().get(i).get(1);
 
             translate.setByX(x0 - xc);
             translate.setByY(y0 - yc);
             st.getChildren().add(translate);
         }
 
-        if (Board.ladders.containsKey(p.getPlayerPosition())) {
-            Ladder gameLadder = Board.ladders.get(p.getPlayerPosition());
-            int newPlayerPosition = gameLadder.end;
+        if (gameBoard.getLadders().containsKey(p.getPlayerPosition())) {
+            Ladder gameLadder = gameBoard.getLadders().get(p.getPlayerPosition());
+            int newPlayerPosition = gameLadder.getEnd();
             System.out.println("Ladder ends at " + newPlayerPosition);
 
             //TODO: Following lines appear to be duplicated. Read about DRY?
-            TranslateTransition translate = new TranslateTransition(Duration.seconds(0.25), piece);
-
-            int xc = Board.board.get(p.getPlayerPosition()).get(0);
-            int yc = Board.board.get(p.getPlayerPosition()).get(1);
-            p.setChangedPosition(newPlayerPosition);
-            int x0 = Board.board.get(newPlayerPosition).get(0);
-            int y0 = Board.board.get(newPlayerPosition).get(1);
-
-
-            translate.setByY(y0 - yc);
-            translate.setByX(x0 - xc);
-
-            st.getChildren().add(translate);
+            animatePlayer(p, newPlayerPosition, st);
         }
 
-        if (Board.snakes.containsKey(p.getPlayerPosition())) {
-            Snake snake = Board.snakes.get(p.getPlayerPosition());
-            int newPosition = snake.end;
+        if (gameBoard.getSnakes().containsKey(p.getPlayerPosition())) {
+            Snake snake = gameBoard.getSnakes().get(p.getPlayerPosition());
+            int newPosition = snake.getEnd();
             System.out.println("Snake ends at " + newPosition);
 
-            TranslateTransition translate = new TranslateTransition(Duration.seconds(0.25), piece);
-
-            int xc = Board.board.get(p.getPlayerPosition()).get(0);
-            int yc = Board.board.get(p.getPlayerPosition()).get(1);
-            p.setChangedPosition(newPosition);
-            int x0 = Board.board.get(newPosition).get(0);
-            int y0 = Board.board.get(newPosition).get(1);
-
-
-            translate.setByY(y0 - yc);
-            translate.setByX(x0 - xc);
-
-            st.getChildren().add(translate);
+            animatePlayer(p, newPosition, st);
         }
 
         st.play();

@@ -1,7 +1,7 @@
 package com.mspan.guigame;
 
 //TODO: Interesting read about unused imports: https://stackoverflow.com/a/979069
-import javafx.event.ActionEvent;
+import com.mspan.guigame.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -44,6 +44,6 @@ public class SceneController {
         stage.show();
 
         Main.startNewGame();
-        Main.pc = (PlayerController) loader.getController();
+        Main.pc = loader.getController();
     }
 }
